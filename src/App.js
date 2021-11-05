@@ -1,5 +1,6 @@
 // import React from 'react'
 import { useState } from 'react'
+import AddTask from './components/AddTask'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 
@@ -25,6 +26,16 @@ const App = () => {
     },
   ])
 
+  // Add Task
+  const addTask = (task) => {
+    // console.log(task)
+    const id = tasks[tasks.length - 1].id + 1
+    // console.log(id)
+    const newTask = { id, ...task }
+    console.log(newTask)
+    setTasks([...tasks, newTask])
+  }
+
   // Delete Task
   const deleteTask = (id) => {
     // console.log('Delete', id)
@@ -44,6 +55,7 @@ const App = () => {
   return (
     <div className='container'>
       <Header />
+      <AddTask onAdd={addTask} />
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
