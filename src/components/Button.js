@@ -17,9 +17,9 @@ Button.defaultProps = {
 }
 
 Button.protoTypes = {
-  text: PropTypes.string,
-  color: PropTypes.string,
-  onClick: PropTypes.func,
+  text: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 }
 
 export default Button

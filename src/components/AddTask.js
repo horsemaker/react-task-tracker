@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
 const AddTask = ({ onAdd }) => {
   const [text, setText] = useState('')
@@ -53,6 +54,10 @@ const AddTask = ({ onAdd }) => {
       <input type='submit' value='Save Task' className='btn btn-block' />
     </form>
   )
+}
+
+AddTask.propTypes = {
+  onAdd: PropTypes.func.isRequired,
 }
 
 export default AddTask
