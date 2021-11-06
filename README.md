@@ -1,5 +1,5 @@
 # Task Tracker
-A simple task tracker app made with ReactJS. The intention being familiarize myself with ReactJS.
+A simple task tracker app made with ReactJS. Just familiarizing myself with ReactJS.
 
 Live Link - [https://react-task-trackerrr.netlify.app/](https://react-task-trackerrr.netlify.app/)
 
